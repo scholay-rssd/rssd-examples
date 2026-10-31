@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "sourceScope": "reviewed-working-files-without-private-history",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "14f62fb9b304c92912c2d7a1fa4f2bc001ad3a44298d8fcdfd5a48100fe7c6a5",
+      "syntheticContentReplacement": false
+    },
+    {
+      "path": "catalogue.mjs",
+      "sha256": "cda175274d23d7bad116a98bdf41611a2af73ef8c2b56675c0bf5a20f62a31f3",
+      "syntheticContentReplacement": false
+    },
+    {
+      "path": "fixtures.mjs",
+      "sha256": "10b75ff936eab8e223dc3d29ee69fa3deacb6e60a6fc8c72fc01f3e508950eea",
+      "syntheticContentReplacement": false
+    },
+    {
+      "path": "images.mjs",
+      "sha256": "e4cef4913d901ade9f1fd8e10b7937988a668a6e5425c6d484912c57f884f15d",
+      "syntheticContentReplacement": false
+    },
+    {
+      "path": "variants.mjs",
+      "sha256": "c446d8292881b38f9b3509373841b18e21bbcba206a8a29563d1641cbca417ef",
+      "syntheticContentReplacement": false
+    }
+  ]
+}
