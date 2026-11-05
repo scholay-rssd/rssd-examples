@@ -10,7 +10,7 @@ const author='RSSD 演示编辑部';
 const sources={
   markdown:{label:'markdown-it',url:'https://github.com/markdown-it/markdown-it'},
   katex:{label:'KaTeX',url:'https://github.com/KaTeX/KaTeX'},
-  rssd:{label:'RSSD 主题目录',url:'https://github.com/scholay/rssd'},
+  rssd:{label:'RSSD 主题目录',url:'https://github.com/scholay-rssd/rssd'},
 };
 const art=[
   {from:'#2b6e52',to:'#f4efe3',bands:0},{from:'#3949ac',to:'#eceaf8',bands:6},
@@ -30,7 +30,7 @@ export function demoSnapshot(site){
 >
 > —— 排版样张的题记
 
-正文段落混合中文与 English words，包含**加粗**、*强调*、~~删除线~~、\`行内代码\` 与[一个普通链接](https://github.com/markdown-it/markdown-it)。裸链接也会被识别：https://github.com/scholay/rssd 。
+正文段落混合中文与 English words，包含**加粗**、*强调*、~~删除线~~、\`行内代码\` 与[一个普通链接](https://github.com/markdown-it/markdown-it)。裸链接也会被识别：https://github.com/scholay-rssd/rssd 。
 
 ## 二级标题：列表
 
@@ -144,7 +144,7 @@ P(A\\mid B)=\\frac{P(B\\mid A)\\,P(A)}{P(B)}
     {id:'roadmap-active',title:'路线图：结构目录持续扩展',state:'active',date:'2026-10-21',targetDate:'2026-12-31',platforms:['网页','桌面']},
     {id:'roadmap-planned',title:'路线图：更多语言版本',state:'planned',date:'2026-10-15',platforms:['网页']},
   ].map(r=>({id:r.id,title:r.title,category:DEMO_COLUMNS[0],date:r.date,author,summary:'路线图卡片读取文章内声明的状态、目标日期与平台。',sources:[sources.rssd],assets:[],
-    markdown:`# ${r.title}\n\n这篇文章携带一个路线图视图，状态为“${r.state}”。视图配置本身不会显示为代码。\n\n\`\`\`scholay-view\n${JSON.stringify({version:1,roadmap:{state:r.state,sourceUrl:'https://github.com/scholay/rssd',...(r.targetDate?{targetDate:r.targetDate}:{}),platforms:r.platforms}})}\n\`\`\`\n\n进展说明写在正文里。\n`}));
+    markdown:`# ${r.title}\n\n这篇文章携带一个路线图视图，状态为“${r.state}”。视图配置本身不会显示为代码。\n\n\`\`\`scholay-view\n${JSON.stringify({version:1,roadmap:{state:r.state,sourceUrl:'https://github.com/scholay-rssd/rssd',...(r.targetDate?{targetDate:r.targetDate}:{}),platforms:r.platforms}})}\n\`\`\`\n\n进展说明写在正文里。\n`}));
   const coverStory={id:'cover-story',title:'带封面的长文：首页卡片与图片栅格',category:DEMO_COLUMNS[0],date:'2026-10-22',author,
     summary:'第一张图片成为首页卡片封面，并进入图片栅格与橱窗。',sources:[sources.rssd],assets:[fifth,square].map(({path,data})=>({path,data})),
     markdown:`# 带封面的长文：首页卡片与图片栅格\n\n![封面：橄榄绿条纹](${fifth.path})\n\n图：文章第一张图片会成为卡片封面。\n\n${Array.from({length:4},(_,i)=>`## 第 ${i+1} 节\n\n这是用于检查长文阅读节奏的段落。每一节都有标题，便于目录、阅读进度与上下篇导航等结构使用。`).join('\n\n')}\n\n![方形示意图](${square.path})\n`};
@@ -188,13 +188,13 @@ P(A\\mid B)=\\frac{P(B\\mid A)\\,P(A)}{P(B)}
     summary:'The English edition of the typography specimen, rendered by the same Theme shell.',date:typography.date,author:'RSSD Demo Desk',category:DEMO_COLUMNS[1],assets:[],
     markdown:`# Specimen: headings, paragraphs, lists and tables\n\nThis English edition links back to its Chinese source. It contains **bold**, *emphasis* and \`inline code\`.\n\n## Lists\n\n- First item\n- Second item\n\n## Formula\n\nInline $e^{i\\pi}+1=0$ and a display formula:\n\n$$\\int_0^1 x\\,dx=\\tfrac12$$\n\n| Module | Route |\n| --- | --- |\n| Calendar | /calendar/ |\n| Roadmap | /roadmap/ |\n`};
   const year=[
-    {id:'demo-winter-school',title:'跨年冬季学校（跨越年末的日程）',start:'2026-12-30',end:'2027-01-02',summary:'检查跨年的日期区间在日历中的呈现。',category:'演示活动',sourceUrl:'https://github.com/scholay/rssd',sourceName:'RSSD',provenance:'已核验',sources:[sources.rssd]},
-    {id:'demo-leap-day',title:'闰日纪念（每年惯例）',start:'2028-02-29',recurrence:{frequency:'yearly',monthDay:'02-29',leapDay:'feb28'},summary:'非闰年在 2 月 28 日显示。',category:'纪念日',sourceUrl:'https://github.com/scholay/rssd',sourceName:'RSSD',provenance:'已核验',sources:[sources.rssd]},
-    {id:'demo-notice',title:'仅有发布日期的通知',start:'2026-11-01',dateBasis:'发布日期（事件日期未核实）',summary:'事件日期未核实时，日历只按发布日期收录。',category:'通知',sourceUrl:'https://github.com/scholay/rssd',sourceName:'RSSD',provenance:'已核验',sources:[sources.rssd]},
+    {id:'demo-winter-school',title:'跨年冬季学校（跨越年末的日程）',start:'2026-12-30',end:'2027-01-02',summary:'检查跨年的日期区间在日历中的呈现。',category:'演示活动',sourceUrl:'https://github.com/scholay-rssd/rssd',sourceName:'RSSD',provenance:'已核验',sources:[sources.rssd]},
+    {id:'demo-leap-day',title:'闰日纪念（每年惯例）',start:'2028-02-29',recurrence:{frequency:'yearly',monthDay:'02-29',leapDay:'feb28'},summary:'非闰年在 2 月 28 日显示。',category:'纪念日',sourceUrl:'https://github.com/scholay-rssd/rssd',sourceName:'RSSD',provenance:'已核验',sources:[sources.rssd]},
+    {id:'demo-notice',title:'仅有发布日期的通知',start:'2026-11-01',dateBasis:'发布日期（事件日期未核实）',summary:'事件日期未核实时，日历只按发布日期收录。',category:'通知',sourceUrl:'https://github.com/scholay-rssd/rssd',sourceName:'RSSD',provenance:'已核验',sources:[sources.rssd]},
   ];
   const history=[
-    {id:'demo-gutenberg',title:'活字印刷的传播（历史上的今天）',year:1455,dateKey:'02-23',summary:'历史记录保留真实发生的年份。',historicalSignificance:'用于检查“历史上的今天”视图与年份显示。',sourceUrl:'https://github.com/scholay/rssd',sourceName:'RSSD',provenance:'已核验',sources:[sources.rssd]},
-    {id:'demo-www',title:'第一个网站上线',year:1991,dateKey:'08-06',summary:'另一条历史记录，用于日历的历史模式。',historicalSignificance:'检查同一视图中多条历史记录的排序。',sourceUrl:'https://github.com/scholay/rssd',sourceName:'RSSD',provenance:'已核验',sources:[sources.rssd]},
+    {id:'demo-gutenberg',title:'活字印刷的传播（历史上的今天）',year:1455,dateKey:'02-23',summary:'历史记录保留真实发生的年份。',historicalSignificance:'用于检查“历史上的今天”视图与年份显示。',sourceUrl:'https://github.com/scholay-rssd/rssd',sourceName:'RSSD',provenance:'已核验',sources:[sources.rssd]},
+    {id:'demo-www',title:'第一个网站上线',year:1991,dateKey:'08-06',summary:'另一条历史记录，用于日历的历史模式。',historicalSignificance:'检查同一视图中多条历史记录的排序。',sourceUrl:'https://github.com/scholay-rssd/rssd',sourceName:'RSSD',provenance:'已核验',sources:[sources.rssd]},
   ];
   const openSource=[
     {url:'https://github.com/markdown-it/markdown-it',title:'markdown-it',date:'2026-10-12',summary:'公开渲染器使用的 Markdown 解析器。',value:'资源记录展示开源项目的名称、摘要与原始入口。',category:'开放资源',sourceName:'GitHub'},
@@ -210,7 +210,7 @@ export function demoOrganization(site){
       {id:'updates',name:'动态与路线',description:'带封面的长文、短讯与路线图文章。',includes:['column-1','column-4','column-5']},
       {id:'resources',name:'开源资源',description:'结构化资源记录与原始入口。',includes:['column-3']},
     ],
-    hubs:[{id:'rssd-demo',name:'RSSD 演示项目',sectionId:'updates',route:'/projects/rssd-demo/',summary:'演示站本身的项目页：常设页面汇集与它关联的文章。',links:[{label:'全部文章',url:'/archive/'},{label:'源代码',url:'https://github.com/scholay/rssd'}]}],
+    hubs:[{id:'rssd-demo',name:'RSSD 演示项目',sectionId:'updates',route:'/projects/rssd-demo/',summary:'演示站本身的项目页：常设页面汇集与它关联的文章。',links:[{label:'全部文章',url:'/archive/'},{label:'源代码',url:'https://github.com/scholay-rssd/rssd'}]}],
     bindings:[
       {recordId:'news:atoms-typography',sectionId:'typesetting',tags:['排版','标题','表格'],related:[{id:'rssd-demo',role:'tutorial'}]},
       {recordId:'news:atoms-figures',sectionId:'typesetting',tags:['图片','图注'],related:[{id:'rssd-demo',role:'note'}]},
