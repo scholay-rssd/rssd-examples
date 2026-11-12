@@ -15,7 +15,7 @@ export const DEMO_VARIANTS=Object.freeze([
   {id:'demo-portfolio',themeId:'portfolio',label:'Portfolio',note:'小猪盖被使用的作品集主题（含自带首页）'},
   {id:'demo-personal',themeId:'personal',label:'Personal',note:'学术海使用的个人主题（含自带首页）'},
   // Each real site's own skin on the shared fixture content (see journal/skins/).
-  ...['metho','enter','study','legis','xsiching','lingxi','pets','personal'].map(site=>({id:'demo-skin-'+site,themeId:'journal',label:'Skin · '+site,note:site+' 的专属外观（journal/skins）'})),
+  ...['metho','enter','study','legis','xsiching','xsime','pets','personal'].map(site=>({id:'demo-skin-'+site,themeId:'journal',label:'Skin · '+site,note:site+' 的专属外观（journal/skins）'})),
   // The academic renderer is bound to its own origin; it is still served locally.
   {id:'demo-academic',themeId:'academic',origin:'https://today.scholay.com',label:'Academic',note:'今日学术使用的学术主题（含日历工作台）'},
 ].map((v,i)=>Object.freeze({...v,port:DEMO_PORT+1+i,preview:`http://127.0.0.1:${DEMO_PORT+1+i}`})));
