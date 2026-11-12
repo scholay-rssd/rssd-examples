@@ -19,8 +19,8 @@ export const DEMO_STRUCTURES=Object.freeze([
   {group:'文章原子',id:'callout',name:'提示块 [!NOTE] / [!TIP] / [!IMPORTANT] / [!WARNING] / [!CAUTION]',route:'/news/atoms-callouts/'},
   {group:'文章原子',id:'article-view',name:'文章内路线图视图（scholay-view）',route:'/news/roadmap-active/'},
   // Reusable page structures (web/themes/structures.mjs), by origin site
-  {group:'页面结构',id:'toc',name:'本页目录（lingxi · Starlight）',route:'/news/atoms-callouts/'},
-  {group:'页面结构',id:'neighbors',name:'上一篇 / 下一篇（lingxi · Starlight）',route:'/news/atoms-figures/'},
+  {group:'页面结构',id:'toc',name:'本页目录（xsime · Starlight）',route:'/news/atoms-callouts/'},
+  {group:'页面结构',id:'neighbors',name:'上一篇 / 下一篇（xsime · Starlight）',route:'/news/atoms-figures/'},
   {group:'页面结构',id:'byline',name:'署名栏：栏目、发布、作者、阅读时长（metho · Distill）',route:'/news/atoms-math/'},
   {group:'页面结构',id:'wide-figures',name:'宽幅配图（metho · Distill）',route:'/news/atoms-figures/'},
   {group:'页面结构',id:'appendix',name:'附录区：来源与参考文献（metho · Distill）',route:'/news/atoms-endnotes/'},
